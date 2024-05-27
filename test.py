@@ -1,6 +1,6 @@
 import unittest
 
-from hello import hello
+from routes import hello
 
 class Tests(unittest.TestCase):
         def test_func(self):
