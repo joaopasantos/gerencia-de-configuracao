@@ -4,7 +4,7 @@ on: [push]
 permissions:
   contents: read
 jobs:
-  build:
+  Testa:
     runs-on: ubuntu-latest
 
     steps:
