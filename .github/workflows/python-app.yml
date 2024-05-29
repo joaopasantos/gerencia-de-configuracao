@@ -1,0 +1,22 @@
+name: Executar testes
+run-name: {{$github.actor}} fez push e suas alterações estão sendo testadas!
+on: [push]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Prepara Python para execução. 🐍
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.x"
+    - name: Atualiza o pip e instala dependências. ⌛
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Executa testes. 🧪
+      run: |
+        python test.py
