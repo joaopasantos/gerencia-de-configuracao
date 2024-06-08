@@ -1,5 +1,5 @@
 name: Testa, constrói e publica imagem Docker
-run-name: ${{ github.actor }} fez ${{ github.event_name }}
+run-name: ${{ github.actor }} fez ${{ github.event_name }} e acionou a integração contínua.
 
 on:
   workflow_dispatch:
