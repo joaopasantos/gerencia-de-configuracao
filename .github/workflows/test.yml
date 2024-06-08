@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Faz checkout no repositório.
+      uses: actions/checkout@v4
     - name: Prepara Python para execução. 🐍
       uses: actions/setup-python@v5
       with:
