@@ -1,6 +1,10 @@
 name: Executar testes
-run-name: ${{ github.actor }} fez push e suas alterações estão sendo testadas!
-on: [push]
+run-name: ${{ github.actor }} fez ${{ github.event_name }} e suas alterações estão sendo testadas!
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 permissions:
   contents: read
 jobs:
