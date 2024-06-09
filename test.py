@@ -1,10 +1,16 @@
 import unittest
 
-from routes import hello
+from routes import *
 
 class Tests(unittest.TestCase):
-        def test_func(self):
-                self.assertEqual(hello(), "Flask!")
+        def test_index(self):
+                self.assertEqual(index(), "Flask!")
+        
+        def test_hello(self):
+                self.assertEqual(hello(), "Hello!")
+
+        def test_hello_with_name(self):
+                self.assertEqual(helloName("Pedro"), "Hello, Pedro!")
 
 if __name__ == '__main__':
         unittest.main()
